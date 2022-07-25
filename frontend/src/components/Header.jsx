@@ -20,6 +20,11 @@ const Header = () => {
         <Link to='/'>Support Desk</Link>
       </div>
       <ul>
+        <li>
+          <Link to='/'>
+            <FaHome /> Home
+          </Link>
+        </li>
         {user ? (
           <li>
             <button className='btn' onClick={onLogout}>
@@ -29,22 +34,17 @@ const Header = () => {
         ) : (
           <>
             <li>
-              <Link to='/login'>
-                <FaSignInAlt /> Login
-              </Link>
-            </li>
-            <li>
               <Link to='/register'>
                 <FaUser /> Register
               </Link>
             </li>
+            <li>
+              <Link to='/login'>
+                <FaSignInAlt /> Login
+              </Link>
+            </li>
           </>
         )}
-        <li>
-          <Link to='/'>
-            <FaHome /> Home
-          </Link>
-        </li>
       </ul>
     </header>
   )
